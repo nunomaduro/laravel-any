@@ -26,13 +26,13 @@ composer require nunomaduro/laravel-any
 How to use:
 
 ```php
-collect()->any(); // returns `false` because the collection is empty.
-
-collect([1])->any(); // returns `true` because the collection is not empty.
-
 $users = User::all();
 
-$users->any(fn ($user) => $user->is_paid_plan); // returns `true` because there is a user with a paid plan
+// Returns `true` if the collection is not empty.
+$users->any();
+
+// Returns `true` if there is an user with a paid plan.
+$users->any(fn ($user) => $user->has_paid_plan);
 ```
 
 ## Contributing
