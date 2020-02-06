@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/nunomaduro/laravel-any/master/docs/example.png" alt="Skeleton example" height="300">
+    <img src="https://raw.githubusercontent.com/nunomaduro/laravel-any/master/docs/example.png" alt="Any example" height="300">
 </p>
 
 <p align="center">
@@ -11,7 +11,7 @@
 
 ## About laravel-any
 
-laravel-any was created by, and is maintained by [Nuno Maduro](https://github.com/nunomaduro), and is an skeleton for php packages.
+laravel-any was created by, and is maintained by [Nuno Maduro](https://github.com/nunomaduro), and is an Laravel collection macro that determine if any item from the collection passes the given truth test.
 
 ## Installation & Usage
 
@@ -25,14 +25,14 @@ composer require nunomaduro/laravel-any
 
 How to use:
 
-```
+```php
 collect()->any(); // without callable, an empty collection returns false.
 
 collect([1])->any(); // without callable, a collection with a truthy value returns true.
 
-collect($users)->any(fn ($user) => $user->is_paid_plan); // true if any user has a paid collection.
+$users = User::all();
 
-User::all()->any(fn ($user) => $user->is_paid_plan); / true if any user has a paid collection.
+$users->any(fn ($user) => $user->is_paid_plan); // true if any user has a paid collection.
 ```
 
 ## Contributing
