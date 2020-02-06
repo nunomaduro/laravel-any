@@ -8,7 +8,7 @@ use NunoMaduro\LaravelAny\AnyServiceProvider;
 $app = new Application();
 $app->register(AnyServiceProvider::class);
 
-it('returns false on emtpy collection', function (): void {
+it('returns false on empty collection', function (): void {
     assertFalse(collect()->any(function () {
         return true;
     }));
