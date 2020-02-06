@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/nunomaduro/laravel-any/master/docs/example.png" alt="Any example" height="300">
+    <img src="https://raw.githubusercontent.com/nunomaduro/laravel-any/master/docs/example.png" alt="Any example">
 </p>
 
 <p align="center">
@@ -26,13 +26,13 @@ composer require nunomaduro/laravel-any
 How to use:
 
 ```php
-collect()->any(); // without callable, an empty collection returns false.
-
-collect([1])->any(); // without callable, a collection with a truthy value returns true.
-
 $users = User::all();
 
-$users->any(fn ($user) => $user->is_paid_plan); // true if any user has a paid collection.
+// Returns `true` if the collection is not empty.
+$users->any();
+
+// Returns `true` if there is an user with a paid plan.
+$users->any(fn ($user) => $user->has_paid_plan);
 ```
 
 ## Contributing
