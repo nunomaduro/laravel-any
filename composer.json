@@ -37,5 +37,12 @@
         "test": [
             "@test:unit"
         ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NunoMaduro\\LaravelAny\\AnyServiceProvider"
+            ]
+        }
     }
 }
