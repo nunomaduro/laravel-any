@@ -15,8 +15,18 @@ it('can proxy method calls to collection item', function (): void {
     assertTrue($collection->any->true());
 });
 
+it('can proxy the call and evaluate property checks', function (): void {
+    $collection = collect([new ExampleProxyTarget]);
+
+    assertFalse($collection->any->falseProperty);
+    assertTrue($collection->any->trueProperty);
+});
+
 class ExampleProxyTarget
 {
+    public $trueProperty = true;
+    public $falseProperty = false;
+
     public function false(): bool
     {
         return false;
