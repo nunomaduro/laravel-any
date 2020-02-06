@@ -19,5 +19,7 @@ final class AnyServiceProvider extends ServiceProvider
 
         Collection::macro('any', Any::invokable());
         LazyCollection::macro('any', Any::invokable());
+
+        Collection::proxy('any');
     }
 }
