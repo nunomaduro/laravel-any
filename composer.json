@@ -1,0 +1,41 @@
+{
+    "name": "nunomaduro/laravel-any",
+    "description": "Determine if any item from the collection passes the given truth test.",
+    "keywords": ["php", "laravel", "collection", "any", "package"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nuno Maduro",
+            "email": "enunomaduro@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "laravel/framework": "^6.0 || ^7.0"
+    },
+    "require-dev": {
+        "nunomaduro/pest": "^0.1"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "NunoMaduro\\LaravelAny\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist"
+    },
+    "scripts": {
+        "test:unit": "pest",
+        "test": [
+            "@test:unit"
+        ]
+    }
+}
