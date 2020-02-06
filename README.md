@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/nunomaduro/laravel-any/master/docs/example.png" alt="Any example" height="300">
+    <img src="https://raw.githubusercontent.com/nunomaduro/laravel-any/master/docs/example.png" alt="Any example">
 </p>
 
 <p align="center">
