@@ -33,6 +33,9 @@ $users->any();
 
 // Returns `true` if there is an user with a paid plan.
 $users->any(fn ($user) => $user->has_paid_plan);
+
+// Returns `true` if there is an user with a paid plan.
+$users->any->has_paid_plan;
 ```
 
 ## Contributing
